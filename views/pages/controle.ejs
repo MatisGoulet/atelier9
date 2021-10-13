@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<!--
+**  file              404.ejs
+**  brief             Laboratoire 3 
+**  author            Matis Goulet
+**  version           1.00
+**  date              2021/15/9
+
+**  mainpage          Labo3.js
+**  author            Matis Goulet
+**  description       ce fichier personalise la page de controle
+-->
+
+<html lang="fr">
+    <head>
+        <%- include('../partials/head') %>
+    </head>
+    <body class="container">
+        <header>
+            <%- include('../partials/header') %>
+        </header>
+        <main>
+            <div class="jumbotron">
+                <h1>Bienvenue dans les modules !</h1>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th colspan="2">Modules</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row"><a href ="/module/1">Module 1</a></th>
+                            <td><%if(state[1]){%><a href ="/change/1">On</a><%}else{%><a href ="/change/1">Off</a><%}%></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><a href ="/module/2">Module 2</a></th>
+                            <td><%if(state[2]){%><a href ="/change/2">On</a><%}else{%><a href ="/change/2">Off</a><%}%></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><a href ="/module/3">Module 3</a></th>
+                            <td><%if(state[3]){%><a href ="/change/3">On</a><%}else{%><a href ="/change/3">Off</a><%}%></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><a href ="/module/4">Module 4</a></th>
+                            <td><%if(state[4]){%><a href ="/change/4">On</a><%}else{%><a href ="/change/4">Off</a><%}%></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><a href ="/module/5">Module 5</a></th>
+                            <td><%if(state[5]){%><a href ="/change/5">On</a><%}else{%><a href ="/change/5">Off</a><%}%></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><a href ="/module/6">Module 6</a></th>
+                            <td><%if(state[6]){%><a href ="/change/6">On</a><%}else{%><a href ="/change/6">Off</a><%}%></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href="/reset" class="btn btn-primary btn-lg btn-block" role="button">Reset</a>
+            </div>
+        </main>
+        <footer>
+            <%- include('../partials/footer') %>
+        </footer>
+    </body>
+</html>

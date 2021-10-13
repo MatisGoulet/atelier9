@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<!--
+**  file              404.ejs
+**  brief             Laboratoire 3 
+**  author            Matis Goulet
+**  version           1.00
+**  date              2021/15/9
+
+**  mainpage          Labo3.js
+**  author            Matis Goulet
+**  description       ce fichier personalise la page d'accueil
+-->
+
+<html lang="fr">
+    <head>
+        <%- include('../partials/head') %>
+    </head>
+    <body class="container">
+        <header>
+            <%- include('../partials/header') %>
+        </header>
+        <main>
+            <div class="jumbotron">
+                <h1>Bienvenue dans mon super site !</h1>
+                <div class="list-group">
+                    <a href="/module/1" class="list-group-item list-group-item-action">Module 1</a>
+                    <a href="/module/2" class="list-group-item list-group-item-action">Module 2</a>
+                    <a href="/module/3" class="list-group-item list-group-item-action">Module 3</a>
+                    <a href="/module/4" class="list-group-item list-group-item-action">Module 4</a>
+                    <a href="/module/5" class="list-group-item list-group-item-action">Module 5</a>
+                    <a href="/module/6" class="list-group-item list-group-item-action">Module 6</a>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <%- include('../partials/footer') %>
+        </footer>   
+    </body>
+</html>

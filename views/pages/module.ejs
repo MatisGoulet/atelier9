@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<!--
+**  file              404.ejs
+**  brief             Laboratoire 3 
+**  author            Matis Goulet
+**  version           1.00
+**  date              2021/15/9
+
+**  mainpage          Labo3.js
+**  author            Matis Goulet
+**  description       ce fichier personalise la page des modules
+-->
+
+<html lang="fr">
+    <head>
+        <%- include('../partials/head') %>
+    </head>
+    <body class="container">
+        <header>
+            <%- include('../partials/header') %>
+        </header>
+        <main>
+            <div class="jumbotron">
+                <h1>Module # <%=nbModule%></h1>
+                <p><%if(state){%> <h2>On</h2><%}else{%><h2>Off</h2><%}%></p>
+            </div>
+        </main>
+        <footer>
+            <%- include('../partials/footer') %>
+        </footer>
+    </body>
+</html>
