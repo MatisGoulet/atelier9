@@ -74,4 +74,9 @@ client.on('connect', function () {
 
 client.subscribe('MODULE/#');
 
+client.on('message', function (topic, message) {
+    console.log(topic.toString());
+    console.log(message.toString());
+});
+  
 console.log("le serveur est lance sur le port 8080");
