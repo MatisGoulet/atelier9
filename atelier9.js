@@ -77,6 +77,23 @@ client.subscribe('MODULE/#');
 client.on('message', function (topic, message) {
     console.log(topic.toString());
     console.log(message.toString());
+    if(topic.indexOf("MODULE") !== -1)
+    {
+        var mySplit = topic.split("/");
+        var numModule = mySplit[mySplit.length-1];          
+        var state = message; 
+    }
+    if(numModule < 7 && numModule > 0)
+    {
+        if(message == "on")
+        {
+            moduleState[numModule] = 1;
+        }
+        else if(message == "off")
+        {
+            moduleState[numModule] = 0;
+        }
+    }
 });
   
 console.log("le serveur est lance sur le port 8080");
